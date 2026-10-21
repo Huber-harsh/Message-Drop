@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A home for unfinished thoughts, long reads, and words that need a little room."
+    />
+    <meta name="theme-color" content="#f4f0e8" />
+    <title>soft / noise — a home for the in-between</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="soft / noise home">
+          <span class="wordmark-icon" aria-hidden="true">s<span>n</span></span>
+          <span>soft <i>/</i> noise</span>
+        </a>
+        <p class="topbar-note">A little room for a lot of words.</p>
+        <div class="topbar-actions">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m16 16 4 4"></path></svg>
+            <span class="visually-hidden">Search writing</span>
+            <input id="search-input" type="search" placeholder="Find a thought…" autocomplete="off" />
+            <kbd>/</kbd>
+          </label>
+          <button class="button button-dark write-trigger" type="button">
+            <span aria-hidden="true">＋</span> Write something
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> AN ONLINE NOTEBOOK · EST. JUST NOW</p>
+            <h1 id="hero-title">For the thoughts<br />that refuse to sit<br /><em>in a straight line.</em></h1>
+            <p class="hero-description">Long stories. Loose ends. Half-formed things you needed to get out of your head and into the world.</p>
+            <a class="text-link" href="#writing">Wander through the writing <span aria-hidden="true">↘</span></a>
+          </div>
+          <div class="hero-art" aria-label="An abstract hand-drawn sun above a dark horizon">
+            <div class="art-orbit orbit-one"></div>
+            <div class="art-orbit orbit-two"></div>
+            <div class="art-sun"></div>
+            <div class="art-horizon"></div>
+            <span class="art-note">stay a<br />little while</span>
+            <span class="art-coordinates">40° 43' 55.3" N<br />73° 59' 11.8" W</span>
+            <span class="art-spark spark-one">✳</span>
+            <span class="art-spark spark-two">✳</span>
+          </div>
+          <div class="hero-index"><span>01</span><span class="index-line"></span><span>∞</span></div>
+        </section>
+
+        <section class="writing-section" id="writing" aria-labelledby="writing-heading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow section-eyebrow">THE NOTEBOOK</p>
+              <h2 id="writing-heading">Things left <em>unsaid.</em></h2>
+            </div>
+            <div class="section-meta"><span class="live-dot"></span><span id="post-count">3 pieces</span><span class="meta-divider">/</span><span>read at your own pace</span></div>
+          </div>
+          <div class="filter-row" role="group" aria-label="Filter writing by category">
+            <button class="filter-chip active" type="button" data-filter="All" aria-pressed="true">Everything <span>✳</span></button>
+            <button class="filter-chip" type="button" data-filter="Field notes" aria-pressed="false">Field notes</button>
+            <button class="filter-chip" type="button" data-filter="Small things" aria-pressed="false">Small things</button>
+            <button class="filter-chip" type="button" data-filter="Letters" aria-pressed="false">Letters</button>
+          </div>
+          <div class="writing-layout">
+            <div class="post-list" id="post-list" aria-live="polite"></div>
+            <aside class="sidebar">
+              <article class="note-card">
+                <span class="note-asterisk" aria-hidden="true">✳</span>
+                <p class="eyebrow">A NOTE FROM THE DESK</p>
+                <h3>Not everything<br />needs a <em>point.</em></h3>
+                <p>This is a place for the meandering, the messy, the too-long-to-text. A page is patient. Let it be.</p>
+                <button class="text-link note-write write-trigger" type="button">Put something here <span aria-hidden="true">↗</span></button>
+              </article>
+              <div class="sidebar-quote">
+                <span aria-hidden="true">“</span>
+                <blockquote>There is no exquisite beauty… without some strangeness in the proportion.</blockquote>
+                <p>— EDGAR ALLAN POE</p>
+              </div>
+              <div class="side-footer"><span class="side-star">✳</span><span>A small corner<br />of the internet.</span><span class="side-year">MMXXV<br />— ∞</span></div>
+            </aside>
+          </div>
+          <div class="empty-search" id="empty-search" hidden>
+            <span aria-hidden="true">↗</span>
+            <p>No thoughts found in this corner.</p>
+            <button class="text-link clear-search" type="button">Clear your search <span aria-hidden="true">↗</span></button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer"><a class="wordmark footer-mark" href="#"><span class="wordmark-icon" aria-hidden="true">s<span>n</span></span><span>soft <i>/</i> noise</span></a><span>Made of words & whatever else.</span><a href="#writing">Back to the top ↑</a></footer>
+    </div>
+
+    <dialog class="editor-dialog" id="editor-dialog" aria-labelledby="editor-title">
+      <form class="editor" id="editor-form">
+        <div class="editor-top">
+          <div><p class="eyebrow">YOUR PAGE, YOUR PACE</p><h2 id="editor-title">Start a new <em>thought.</em></h2></div>
+          <button class="icon-button close-editor" type="button" aria-label="Close editor">×</button>
+        </div>
+        <label class="field-label" for="post-title">Give it a name <span>Required</span></label>
+        <input class="title-input" id="post-title" name="title" maxlength="100" placeholder="The shape of a thought…" required />
+        <div class="field-split">
+          <label class="field-label" for="post-category">Where does it belong?
+            <select id="post-category" name="category">
+              <option>Field notes</option><option>Small things</option><option>Letters</option>
+            </select>
+          </label>
+          <label class="field-label" for="post-author">Byline <span>Optional</span>
+            <input id="post-author" name="author" maxlength="40" placeholder="Your name or a little mystery" />
+          </label>
+        </div>
+        <label class="field-label" for="post-excerpt">A small opening <span>Optional · shows on the notebook</span></label>
+        <textarea class="excerpt-input" id="post-excerpt" name="excerpt" maxlength="240" rows="2" placeholder="A line or two to invite someone in…"></textarea>
+        <div class="body-label-row"><label class="field-label" for="post-body">The long version <span>Line breaks stay exactly where you leave them</span></label><span class="word-count" id="word-count">0 words</span></div>
+        <textarea class="body-input" id="post-body" name="body" placeholder="Start anywhere.&#10;&#10;Leave a little space.&#10;Change your mind mid-sentence.&#10;&#10;This page is yours." required></textarea>
+        <div class="editor-bottom"><p><span aria-hidden="true">◉</span> Your writing stays on this device.</p><div class="editor-actions"><button class="button button-light close-editor" type="button">Cancel</button><button class="button button-outline" type="submit" name="intent" value="draft">Save a draft</button><button class="button button-dark" type="submit" name="intent" value="publish">Publish piece <span aria-hidden="true">↗</span></button></div></div>
+      </form>
+    </dialog>
+
+    <dialog class="reader-dialog" id="reader-dialog" aria-labelledby="reader-title">
+      <article class="reader">
+        <div class="reader-top"><span class="reader-brand">soft <i>/</i> noise</span><button class="icon-button close-reader" type="button" aria-label="Close story">×</button></div>
+        <div class="reader-content" id="reader-content"></div>
+        <div class="reader-actions"><button class="text-link edit-post" type="button">Edit this piece <span aria-hidden="true">↗</span></button><button class="text-link delete-post" type="button">Remove it <span aria-hidden="true">×</span></button></div>
+        <div class="reader-end">✳ <span>END OF THIS LITTLE THOUGHT</span> ✳</div>
+      </article>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
